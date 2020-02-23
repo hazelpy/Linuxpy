@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/usr/bin/env python
 
 __readme__ = """\
 This is my first Linux application!
