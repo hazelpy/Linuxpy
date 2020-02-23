@@ -20,10 +20,12 @@ def Clear():
 def ReadMe():
     print(__readme__)
 
-def Version():
-    print("Linuxpy v0.0.1")
+def Version(debug):
+    if not debug: print("Linuxpy v0.0.1")
+    return 0.01
 
 def _end():
+    print(f"Linuxpy v{Version(True)} - Made by Hazelpy")
     print("Usage: python3 main.py [-v | -readme | -clear]")
     sys.exit(0)
 
