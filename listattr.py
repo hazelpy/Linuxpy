@@ -9,3 +9,6 @@ def Pow(li: list, power):
 
     return re
 
+def Half(li: list, right = False):
+    if right: return [li[i] for i in range(len(li)) if i >= int(len(li) / 2)]
+    else: return [li[i] for i in range(len(li)) if i <= int(len(li) / 2)]

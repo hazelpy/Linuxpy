@@ -31,7 +31,17 @@ def Pow():
     if len(sys.argv) > 3:
         print(List.Pow([float(sys.argv[2])], float(sys.argv[3]))[0])
 
-enum = {"-readme": ReadMe, "-v": Version, "-clear": Clear, "--pow": Pow}
+def Test():
+    if not len(sys.argv) > 2: print(List.Half([1, 2, 3, 4, 5]))
+    else:
+        toggle = False
+
+        if sys.argv[2] == "True":
+            toggle = True
+
+        print(List.Half([1, 2, 3, 4, 5], toggle))
+
+enum = {"-readme": ReadMe, "-v": Version, "-clear": Clear, "--pow": Pow, "--test": Test}
 
 if not len(sys.argv) > 1: _end()
 if sys.argv[1] in enum.keys():
