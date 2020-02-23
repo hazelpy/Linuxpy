@@ -1,5 +1,6 @@
 import sys
 import os
+import listattr as List
 
 from os import system as System
 
@@ -26,7 +27,11 @@ def _end():
     print("Usage: python3 main.py [-v | -readme | -clear]")
     sys.exit(0)
 
-enum = {"-readme": ReadMe, "-v": Version, "-clear": Clear}
+def Pow():
+    if len(sys.argv) > 3:
+        print(List.Pow([float(sys.argv[2])], float(sys.argv[3]))[0])
+
+enum = {"-readme": ReadMe, "-v": Version, "-clear": Clear, "--pow": Pow}
 
 if not len(sys.argv) > 1: _end()
 if sys.argv[1] in enum.keys():
